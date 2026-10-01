@@ -1,0 +1,14 @@
+# Dataset Retrieval & Data Manipulation
+datasets
+pandas
+scikit-learn
+numpy
+
+# NLP Frameworks & Transformers
+transformers
+torch
+accelerate
+
+# Evaluation & Utilities
+evaluate
+tqdm
