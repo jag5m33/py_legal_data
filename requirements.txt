@@ -3,11 +3,15 @@ datasets
 pandas
 scikit-learn
 numpy
+seaborn 
+matplotlib
 
 # NLP Frameworks & Transformers
 transformers
 torch
 accelerate
+sentence-transformers
+jupyter pytest
 
 # Evaluation & Utilities
 evaluate
