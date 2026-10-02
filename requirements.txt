@@ -5,6 +5,8 @@ scikit-learn
 numpy
 seaborn 
 matplotlib
+pyarrow
+spaCy
 
 # NLP Frameworks & Transformers
 transformers
