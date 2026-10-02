@@ -2,6 +2,7 @@
 datasets
 pandas
 scikit-learn
+sklearn
 numpy
 seaborn 
 matplotlib

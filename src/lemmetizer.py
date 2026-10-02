@@ -16,7 +16,7 @@ def lemmatize_clauses(df, nlp):
         # Tokenisation and lemmatisation have ALREADY happened by this point;
         # here we are just reading the results.
         for token in doc:
-
+            
             # token.text   = the word as it appeared, e.g. "parties"
             # token.lemma_ = its base form found by the lemmatizer, e.g. "party"
             words.append(token.lemma_)
@@ -24,7 +24,8 @@ def lemmatize_clauses(df, nlp):
         # Join the base forms back into one string, so each clause is a single text again.
         # e.g. ["the", "party", "shall", "terminate"] -> "the party shall terminate"
         results.append(" ".join(words))
+        
 
     # Add the lemmatised clauses as a new column, in the same order as the original rows.
-        df["lemmatized_text"] = results
-        return df
+    df["lemmatized_text"] = results
+    return df
