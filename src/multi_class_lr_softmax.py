@@ -1,9 +1,10 @@
 from sklearn.linear_model import LogisticRegression
-from sklearn.metrics import accuracy_score, f1_score, classification_report
+from sklearn.metrics import accuracy_score, f1_score
 
 # sklearn's LogisticRegression automatically uses the multinomial (Softmax) formulation
 # Encapsulation: Keeps data loading, preprocessing, training, and predicting in one place.
 # Reusability: Allows you to create multiple distinct instances of models easily.
+# Per-class scores, confusions and mistakes live in src/error_analysis.py (ErrorAnalysis).
 
 class MultiClassLogisticRegression:
 
@@ -16,7 +17,7 @@ class MultiClassLogisticRegression:
         self.y_val = y_val
         self.y_test = y_test
 
-        
+
         self.model = LogisticRegression(C=C,
                                         solver="lbfgs",
                                         max_iter=1000,
@@ -47,11 +48,6 @@ class MultiClassLogisticRegression:
 
     def validate(self):
         return self._score(self.x_val, self.y_val, "validation")
-
-    #run classification report on validation set
-    def report(self, preds):
-        return classification_report(self.y_val, preds,
-                                 output_dict=True, zero_division=0)
 
     def eval_test(self):
         return self._score(self.x_test, self.y_test, "test")
