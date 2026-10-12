@@ -25,7 +25,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 def tfid(stop_words_set):
     vectorizer = TfidfVectorizer(stop_words= (stop_words_set), 
                                  lowercase = True, 
-                                 ngram_range = (1,2), 
+                                 ngram_range = (1,3), 
                                  min_df = 4, 
                                  sublinear_tf = True, 
                                  max_df = 0.9, 
