@@ -7,12 +7,12 @@ from sklearn.metrics import (classification_report, confusion_matrix,
 
 class ErrorAnalysis:
     # Everything needed to study one model's mistakes on ONE split (normally validation).
-    # y_true      : the real labels (numbers)
-    # y_pred      : the model's guesses (numbers), e.g. val_preds
+    # y_true : the real labels (numbers)
+    # y_pred : the model's guesses (numbers), e.g. val_preds
     # label_names : dict, number -> clause name, e.g. 47 -> "Governing Laws"
-    # classes     : all class numbers in a fixed order (lr.model.classes_),
-    #               so every table has the same 100 classes in the same order
-    # texts       : the clause text for each row, so mistakes can be read
+    # classes : all class numbers in a fixed order (lr.model.classes_),
+    # so every table has the same 100 classes in the same order
+    # texts : the clause text for each row, so mistakes can be read
     def __init__(self, y_true, y_pred, label_names, classes, texts=None):
         self.y_true = np.asarray(y_true)
         self.y_pred = np.asarray(y_pred)
