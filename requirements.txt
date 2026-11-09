@@ -2,7 +2,6 @@
 datasets
 pandas
 scikit-learn
-sklearn
 numpy
 seaborn 
 matplotlib
@@ -19,3 +18,4 @@ sentence-transformers
 # Evaluation & Utilities
 evaluate
 tqdm
+mlflow

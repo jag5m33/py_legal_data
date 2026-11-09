@@ -1,2 +1,7 @@
 legal_venv
 data
+models/
+notebooks/mlruns/
+*.joblib
+*.skops
+*.db
